@@ -17,3 +17,18 @@
 
 - Form umumnya digunakan untuk menangkap input dari user dalam jumlah banyak sekaligus. Bisa ditebak dari namanya pasti bentuk form akan mirip seperti formulir.
 - Ada field yang bisa diisi dan ada juga tombol bernama "Submit Data" ketika kita sudah selesai mengisi data pada form. Sama halnya dengan elemen HTML pada umumnya, terdapat beberapa event yang dihasilkan oleh form yang akan kita terapkan.
+
+# Event onInput
+
+- Event onInput akan dijalankan setiap kali kita menulis atau menghapus apa pun pada sebuah field input yang memiliki event listener tersebut.
+- event onInput memeriksa setiap kali menulis atau menghapus karakter. Ingat ya, karena nanti kita menggunakan method addEventListener(), maka versi string event onInput untuk dimasukkan ke parameter pertama method tersebut adalah “input”.
+- Untuk mengimplementasi fitur tersebut, kita harus menambahkan event listener pada input yang memiliki id dan memperbarui teks setiap kali kita menulis atau menghapus karakter baru.
+
+# Event onFocus
+
+- Event onFocus akan dijalankan ketika melakukan klik di sebuah elemen input. Kita akan mencoba untuk menampilkan tulisan berupa notifikasi jumlah karakter yang masih diperbolehkan. Untuk dapat melakukan hal tersebut, kita harus menambahkan sebuah event handler pada elemen input yang menerima penulisan nama panggilan untuk event onFocus.
+
+# Event onBlur
+
+- Event onBlur akan dijalankan ketika pada kondisi yang terbalik dengan event onFocus, yakni jika kita “pergi” dari elemen yang memiliki event handler untuk event onFocus. Apa maksud dari “pergi”? Maksudnya adalah kita tidak lagi berinteraksi secara langsung dengan elemen tersebut seperti kita telah melakukan klik pada elemen lain.
+- Kode tersebut akan “menyembunyikan” kembali pesan notifikasi jumlah sisa karakter yang diperbolehkan. Proses tersebut terjadi ketika kita klik elemen lain alias elemen <input> yang membuat nama panggilan sudah tidak menjadi fokus utama lagi.

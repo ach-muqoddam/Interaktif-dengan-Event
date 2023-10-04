@@ -42,11 +42,10 @@
               maxlength="15"
             />
             <br />
-            <label id="notifikasiSisaKarakter">
-              Sisa karakter: <span id="sisaKarakter"></span>
+            <label id="notifikasiSisKarakter">
+              Sisa Karakter: <span id="sisaKarakter"></span>
             </label>
           </div>
-
           <div class="form-element" id="fieldCopy">
             <label for="inputCopy"><i>Copy</i> tulisan ini:</label>
             <br />
@@ -109,6 +108,7 @@
         document.getElementById("sisaKarakter").innerText =
           inputMaxLengthOnLoad;
 
+        // Event onInput
         document
           .getElementById("inputNama")
           .addEventListener("input", function () {
@@ -121,20 +121,32 @@
             console.log("jumlahKarakterMaksimal: ", jumlahKarakterMaksimal);
 
             const sisKarakterUpdate =
-              jumlahKarakterDiketik - jumlahKarakterMaksimal;
+              jumlahKarakterMaksimal - jumlahKarakterDiketik;
             document.getElementById("sisaKarakter").innerText =
-              sisKarakterUpdate.toString;
+              sisKarakterUpdate.toString();
 
             if (sisKarakterUpdate === 0) {
               document.getElementById("sisaKarakter").innerText =
                 "Batas Maksimal tercapai!";
-            } else if (sisKarakterUpdate >= 5) {
-              document.getElementById("notifikasiSisaKarakter").style.color =
-                "red";
-            } else {
-              document.getElementById("notifikasiSisaKarakter").style.color =
-                "black";
             }
+          });
+
+        // Event onFocus
+        document
+          .getElementById("inputNama")
+          .addEventListener("focus", function () {
+            console.log("inputNama: focus");
+            document.getElementById("notifikasiSisKarakter").style.visibility =
+              "visible";
+          });
+
+        // Event onBlur
+        document
+          .getElementById("inputNama")
+          .addEventListener("blur", function () {
+            console.log("inputNama: blur");
+            document.getElementById("notifikasiSisKarakter").style.visibility =
+              "hidden";
           });
       });
     </script>
