@@ -1,4 +1,9 @@
-# Belajar-Membuat-Front-End-Web-Pemula
+# Apa itu Event
+
+- Memanipulasi konten halaman web menggunakan JavaScript. Bahkan, juga dapat memanipulasi elemen HTML, seperti menghapus, menambahkan, hingga memanipulasi atributnya.
+- Suatu elemen dapat interaktif ketika mendapatkan suatu feedback (event)
+
+## Berikut macam-macam event di JavaScript
 
 # Event Bubbling dan Capturing
 
@@ -32,3 +37,12 @@
 
 - Event onBlur akan dijalankan ketika pada kondisi yang terbalik dengan event onFocus, yakni jika kita “pergi” dari elemen yang memiliki event handler untuk event onFocus. Apa maksud dari “pergi”? Maksudnya adalah kita tidak lagi berinteraksi secara langsung dengan elemen tersebut seperti kita telah melakukan klik pada elemen lain.
 - Kode tersebut akan “menyembunyikan” kembali pesan notifikasi jumlah sisa karakter yang diperbolehkan. Proses tersebut terjadi ketika kita klik elemen lain alias elemen <input> yang membuat nama panggilan sudah tidak menjadi fokus utama lagi.
+
+# Event onChange
+
+- Event onChange memiliki perilaku yang mirip dengan onInput, yaitu event yang terjadi jika terdapat perubahan nilai. Namun, terdapat perbedaan yang dimiliki oleh onChange.
+- event onChange akan terjadi jika elemen input mengalami perubahan nilai atau lebih tepatnya event onChange seakan-akan merupakan gabungan dari event onInput dan onBlur.
+
+# Event onCopy & onPaste
+
+- Event ini tergolong dalam kelompok clipboard events. Event ini terjadi jika kita melakukan operasi pada clipboard seperti copy dan paste.

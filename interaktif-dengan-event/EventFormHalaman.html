@@ -148,6 +148,49 @@
             document.getElementById("notifikasiSisKarakter").style.visibility =
               "hidden";
           });
+
+        // Event onChange
+        document
+          .getElementById("inputCaptcha")
+          .addEventListener("change", function () {
+            console.log("inputCaptcha: change");
+
+            const inputCaptcha = document.getElementById("inputCaptcha").value;
+            const submitButtonStatus = document.getElementById("submitButton");
+
+            if (inputCaptcha === "PRNU") {
+              submitButton.removeAttribute("disabled");
+            } else {
+              submitButtonStatus.setAttribute("disabled", "");
+            }
+          });
+
+        document
+          .getElementById("formDataDiri")
+          .addEventListener("submit", function (event) {
+            const inputCaptcha = document.getElementById("inputCaptcha").value;
+
+            if (inputCaptcha === "PRNU") {
+              alert("Selamat! Captcha yang anda masukkan sudah benar");
+            } else {
+              alert("Sorry, Captcha yang anda masukkan salah");
+            }
+            event.preventDefault();
+          });
+
+        // Event onCopy
+        document
+          .getElementById("inputCopy")
+          .addEventListener("copy", function () {
+            alert("berhasil Copy tulisan");
+          });
+
+        // Event onPaste
+        document
+          .getElementById("inputPaste")
+          .addEventListener("paste", function () {
+            alert("berhasil Paste tulisan");
+          });
       });
     </script>
   </body>
